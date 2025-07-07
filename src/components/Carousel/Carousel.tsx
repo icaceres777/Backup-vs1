@@ -1,36 +1,42 @@
-// src/components/Header.tsx
-'use client';
+'use client'
 
-import { FaSearch, FaShoppingCart } from 'react-icons/fa';
+import useEmblaCarousel from 'embla-carousel-react'
+import { useEffect } from 'react'
+import Image from 'next/image'
 
-export default function Header() {
+const images = [
+  '/banner1.jpg',
+  '/banner2.jpg',
+  '/banner3.jpg',
+]
+
+export default function Carousel() {
+  const [emblaRef] = useEmblaCarousel({ loop: true })
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // @ts-ignore
+      emblaRef.current?.scrollNext()
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [emblaRef])
+
   return (
-    <header className="bg-[#131921] text-white">
-      <div className="flex items-center px-4 py-3 space-x-4">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-yellow-400">Mercalive</div>
-
-        {/* Barra de búsqueda */}
-        <div className="flex-grow hidden sm:flex items-center bg-white rounded-md overflow-hidden">
-          <input
-            type="text"
-            placeholder="Buscar productos..."
-            className="flex-grow px-4 py-2 text-black outline-none"
-          />
-          <button className="bg-yellow-400 px-4 py-2 text-black hover:bg-yellow-500">
-            <FaSearch />
-          </button>
-        </div>
-
-        {/* Iconos */}
-        <div className="flex items-center space-x-6 text-sm">
-          <div className="cursor-pointer hover:underline">Cuenta & Listas</div>
-          <div className="cursor-pointer hover:underline">Pedidos</div>
-          <div className="flex items-center cursor-pointer hover:underline">
-            <FaShoppingCart className="mr-1" /> Carrito
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex">
+        {images.map((src, index) => (
+          <div className="flex-[0_0_100%] relative h-64 md:h-80" key={index}>
+            <Image
+              src={src}
+              alt={`Banner ${index + 1}`}
+              fill
+              style={{ objectFit: 'cover' }}
+              className="rounded"
+              priority={index === 0}
+            />
           </div>
-        </div>
+        ))}
       </div>
-    </header>
-  );
+    </div>
+  )
 }
