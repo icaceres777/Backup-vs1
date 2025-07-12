@@ -1,0 +1,109 @@
+.
+├── Command
+├── README.md
+├── Settings
+├── eslint.config.mjs
+├── estructura.txt
+├── next-env.d.ts
+├── next.config.js
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── page.tsx
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   │   ├── banner1.jpg
+│   │   ├── banner2.jpg
+│   │   └── banner3.jpg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src
+│   ├── app
+│   │   ├── api
+│   │   │   └── pedidos
+│   │   ├── ayuda
+│   │   │   └── page.tsx
+│   │   ├── cart
+│   │   │   └── page.tsx
+│   │   ├── checkout
+│   │   │   └── page.tsx
+│   │   ├── contacto
+│   │   │   └── page.tsx
+│   │   ├── devoluciones
+│   │   │   ├── [id]
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── mis-compras
+│   │   │   └── page.tsx
+│   │   ├── mis-pedidos
+│   │   │   ├── [id]
+│   │   │   └── page.tsx
+│   │   ├── nosotros
+│   │   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   ├── producto
+│   │   │   └── [slug]
+│   │   ├── productos
+│   │   │   └── page.tsx
+│   │   ├── test
+│   │   │   └── page.tsx
+│   │   └── test-pedidos
+│   │       └── page.tsx
+│   ├── components
+│   │   ├── Banner
+│   │   │   ├── Banner.tsx
+│   │   │   └── CallToAction.tsx
+│   │   ├── Carousel
+│   │   │   └── Carousel.tsx
+│   │   ├── Cart
+│   │   │   └── MiniCart.tsx
+│   │   ├── CartIcon.tsx
+│   │   ├── CategoriaMenu.tsx
+│   │   ├── Devoluciones
+│   │   │   └── DevolucionItem.tsx
+│   │   ├── Estimacion
+│   │   │   ├── EstimacionEntrega.tsx
+│   │   │   └── EstimacionEntregaDemo.tsx
+│   │   ├── EstimacionEntrega.tsx
+│   │   ├── EstimacionEntregaDemo.tsx
+│   │   ├── Floating
+│   │   │   └── SupportButton.tsx
+│   │   ├── Footer
+│   │   │   └── MiniFooter.tsx
+│   │   ├── FormularioPedido.tsx
+│   │   ├── Header
+│   │   │   ├── Header.tsx
+│   │   │   ├── MainHeader.tsx
+│   │   │   ├── SecondaryNav.tsx
+│   │   │   └── src
+│   │   ├── Header.tsx
+│   │   ├── HeaderClient
+│   │   │   └── index.tsx
+│   │   ├── Highlights
+│   │   │   └── ServiceHighlights.tsx
+│   │   ├── Modals
+│   │   │   └── ModalDevolucion.tsx
+│   │   ├── Pedidos
+│   │   │   ├── EstadoPedidoTimeline.tsx
+│   │   │   └── PedidoItem.tsx
+│   │   ├── Productos
+│   │   │   └── ProductCard.tsx
+│   │   ├── SeguimientoPedidos.tsx
+│   │   └── Trusted
+│   │       └── TrustedSection.tsx
+│   ├── lib
+│   │   └── pedidos.ts
+│   ├── pages
+│   │   └── api
+│   └── types
+│       └── cart.ts
+├── tailwind.config.ts
+└── tsconfig.json
+
+42 directories, 65 files
